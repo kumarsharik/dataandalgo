@@ -24,9 +24,11 @@ public class MaxMinDeletion {
 		int num=0 ;
 		while(a.size()>1)
 		{
+			++count;
+			Sm :
 			if(count%2==0)
 			{
-				for(int i=0 ; i<a.size()-2; i++)
+				for(int i=0 ; i<a.size()-1; i++)
 				{
 					for(int j=i+1 ; j<a.size()-1; j++)
 					{
@@ -47,41 +49,14 @@ public class MaxMinDeletion {
 						}
 					}
 					
-					System.out.print(num);
 					
 				
 				}
-			}else {
 				
-				
-				for(int i=0 ; i<a.size()-2; i++)
-				{
-					for(int j=i+1 ; j<a.size()-1; j++)
-					{
-						if(a.get(i)<a.get(j))
-						{
-							if(min<a.get(i))
-							{
-								min =a.get(i);
-								num =i;		
-							}
-						}else{
-							
-							if(min<a.get(j))
-							{
-								max =a.get(j);
-								num =j;		
-							}
-						}
-					}
-					
-					System.out.print(num);
-				
-			}
-				
+				System.out.print(num);
 				a.remove(num);
-				count++;
-		}
+				break Sm;
+			}
 	}
 		System.out.println(a);
 
