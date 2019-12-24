@@ -17,10 +17,7 @@ public static void main(String[] args) {
 				//secondmax=temp;
 				
 			}
-			else if(arr1[i]==secondmax)
-			{
-				System.out.println("duplicate");
-			}
+			
 			
 		
 	}
